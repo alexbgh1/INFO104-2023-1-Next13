@@ -1,0 +1,38 @@
+.title {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #040404;
+  margin-bottom: 1rem;
+}
+
+.text {
+  text-align: center;
+}
+
+.container {
+  margin-top: 2rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Todos los elementos después de una clase .container que tengan un
+ 'a' (anchor = links), dales este estilo */
+.container > a {
+  background-color: rgb(240, 247, 245);
+  border: 1px solid #040404;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  width: 150px;
+  text-align: center;
+}
+
+.container > a:hover {
+  background-color: var(--nav);
+  color: #fff;
+}

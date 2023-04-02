@@ -1,0 +1,59 @@
+/* Clases para el componente GeneralLayout.jsx, Navigation.jsx y Footer.jsx */
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--nav);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+.navigation__navbar {
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation__navbar_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__navbar_list {
+    font-size: 1.2rem;
+  }
+}
+
+.navigation__active > a {
+  color: red;
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--nav);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

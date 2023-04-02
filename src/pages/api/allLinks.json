@@ -1,0 +1,17 @@
+[
+  {
+    "pageId": "query",
+    "links": [
+      { "href": "/query", "label": "Query" },
+      { "href": "/query/response", "label": "Response" }
+    ]
+  },
+  {
+    "pageId": "hooks",
+    "links": [
+      { "href": "/hooks", "label": "Hooks" },
+      { "href": "/hooks/useStateT", "label": "useStateT" },
+      { "href": "/hooks/useEffectT", "label": "useEffectT" }
+    ]
+  }
+]
