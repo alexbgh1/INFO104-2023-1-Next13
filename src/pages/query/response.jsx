@@ -17,7 +17,7 @@ export default function Response() {
   return (
     <QueryLayout pageId="query">
       <Head>
-        <title>Query - Response</title>
+        <title>Query - Response {opt}</title>
       </Head>
 
       {/* Esto significa:

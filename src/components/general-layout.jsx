@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/query", label: "Query" },
+  { href: "/json", label: "Json" },
   { href: "/hooks", label: "Hooks" },
   { href: "/localStorage", label: "LocalStorage" },
   { href: "/test", label: "Test" },

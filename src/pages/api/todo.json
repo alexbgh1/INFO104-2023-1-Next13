@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "Ver memes", "checked": true },
+  { "id": 2, "title": "Estudiar", "checked": false },
+  { "id": 3, "title": "Dormir 8 horas", "checked": false },
+  { "id": 4, "title": "Llegar a la hora", "checked": true }
+]

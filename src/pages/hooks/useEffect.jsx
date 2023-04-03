@@ -5,9 +5,9 @@ export default function useEffectT() {
   return (
     <QueryLayout pageId="hooks">
       <Head>
-        <title>useEffectT</title>
+        <title>Hooks - useEffect</title>
       </Head>
-      <h1>useEffectT</h1>
+      <h1>useEffect</h1>
     </QueryLayout>
   );
 }

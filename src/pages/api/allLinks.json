@@ -10,8 +10,36 @@
     "pageId": "hooks",
     "links": [
       { "href": "/hooks", "label": "Hooks" },
-      { "href": "/hooks/useStateT", "label": "useStateT" },
-      { "href": "/hooks/useEffectT", "label": "useEffectT" }
+      { "href": "/hooks/useState", "label": "useState" },
+      { "href": "/hooks/useEffect", "label": "useEffect" }
+    ]
+  },
+  {
+    "pageId": "localStorage",
+    "links": [
+      { "href": "/localStorage", "label": "LocalStorage" },
+      { "href": "/localStorage/ejemplo-1", "label": "Ejemplo 1" },
+      { "href": "/localStorage/ejemplo-2", "label": "Ejemplo 2" }
+    ]
+  },
+  {
+    "pageId": "test",
+    "links": [{ "href": "/test", "label": "Test" }]
+  },
+  {
+    "pageId": "chakraUI",
+    "links": [
+      { "href": "/chakraUI", "label": "ChakraUI" },
+      { "href": "/chakraUI/ejemplo-1", "label": "Ejemplo 1" },
+      { "href": "/chakraUI/ejemplo-2", "label": "Ejemplo 2" }
+    ]
+  },
+  {
+    "pageId": "json",
+    "links": [
+      { "href": "/json", "label": "Json" },
+      { "href": "/json/ejemplo-1", "label": "Ejemplo 1" },
+      { "href": "/json/ejemplo-2", "label": "Ejemplo 2" }
     ]
   }
 ]

@@ -7,7 +7,13 @@ export default function Hooks() {
       <Head>
         <title>Hooks</title>
       </Head>
-      <h1>Hooks</h1>
+      <div className="container">
+        <h1 className="title">Hooks</h1>
+        <p className="text">
+          Algunos de los hooks más usados son <b>useState</b> y <b>useEffect</b>
+          .
+        </p>
+      </div>
     </QueryLayout>
   );
 }

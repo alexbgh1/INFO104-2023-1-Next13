@@ -5,9 +5,9 @@ export default function useStateT() {
   return (
     <QueryLayout pageId="hooks">
       <Head>
-        <title>useStateT</title>
+        <title>Hooks - useState</title>
       </Head>
-      <h1>useStateT</h1>
+      <h1>useState</h1>
     </QueryLayout>
   );
 }
