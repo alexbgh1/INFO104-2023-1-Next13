@@ -13,6 +13,14 @@ export default function Hooks() {
           Algunos de los hooks más usados son <b>useState</b> y <b>useEffect</b>
           .
         </p>
+        <p className="text">
+          <b>useState:</b> Nos ayuda a almacenar variables "reactivas", por
+          ejemplo almacenar un mensaje.
+        </p>
+        <p className="text">
+          <b>useEffect:</b> Nos ayuda a "escuchar (listener)" variables, por
+          ejemplo que al cambiar una variable, cambie el fondo de color.
+        </p>
       </div>
     </QueryLayout>
   );

@@ -11,7 +11,8 @@
     "links": [
       { "href": "/hooks", "label": "Hooks" },
       { "href": "/hooks/useState", "label": "useState" },
-      { "href": "/hooks/useEffect", "label": "useEffect" }
+      { "href": "/hooks/useEffect", "label": "useEffect" },
+      { "href": "/hooks/useContext", "label": "useContext" }
     ]
   },
   {

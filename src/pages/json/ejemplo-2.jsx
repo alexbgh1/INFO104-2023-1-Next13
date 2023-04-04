@@ -2,17 +2,17 @@ import QueryLayout from "@/components/sub-layout";
 import Head from "next/head";
 import Image from "next/image";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-/* Definimos async ya que debemos solicitar y esperar una respuesta */
 export async function getServerSideProps() {
-  // Definimos una url que contiene un archivo json
-  // Puedes acceder a este archivo en la siguiente dirección:
-  // Se recomienda la extensión JSON Formater
-
-  const url = "https://alexbgh1.github.io/cositas/data/data.json";
-  const res = await fetch(url);
-  const data = await res.json();
+  let data = null;
+  try {
+    const url = "https://alexbgh1.github.io/cositas/data/data.json";
+    const res = await fetch(url);
+    data = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
 
   return {
     props: {
@@ -25,10 +25,19 @@ export default function Ejemplo2({ data }) {
   const [random, setRandom] = useState(null);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  const getRandomElement = () => {
+  const handleOnClick = () => {
+    setImageLoaded(false);
     const random = Math.floor(Math.random() * data.length);
-    return data[random];
+    setRandom(data[random]);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setImageLoaded(true);
+    }, 500); // Esperamos 0.5 segundos antes de mostrar la imagen
+
+    return () => clearTimeout(timer);
+  }, [random]); // Solo esperamos cuando cambia el valor de random
 
   return (
     <QueryLayout pageId="json">
@@ -45,15 +54,7 @@ export default function Ejemplo2({ data }) {
           También existe <b>getStaticProps</b> aunque se utilizaría para
           contenido estático
         </p>
-        <button
-          className="btn"
-          // Arrow function es : () => {}
-          // Se utiliza un arrow function para que no se ejecute al cargar la página
-          // Sino que se ejecute al hacer click
-          onClick={() => {
-            setRandom(getRandomElement());
-          }}
-        >
+        <button className="btn" onClick={handleOnClick}>
           Soprendeme!
         </button>
         {random && (
@@ -63,9 +64,11 @@ export default function Ejemplo2({ data }) {
               alt={random.texto}
               width={300}
               height={300}
-              onLoad={() => setImageLoaded(true)}
+              unoptimized
+              priority
             />
-            {imageLoaded && <small className="caption">{random.texto}</small>}
+
+            <small className="caption">{random.texto}</small>
           </div>
         )}
       </div>

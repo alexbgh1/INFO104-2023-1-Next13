@@ -92,3 +92,11 @@ img {
   background-color: #e7f0ea;
   color: var(--nav);
 }
+
+.inputText {
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--nav);
+  font-size: 1.2rem;
+}
