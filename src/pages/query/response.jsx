@@ -1,4 +1,4 @@
-import QueryLayout from "@/components/sub-layout";
+import SubLayout from "@/components/sub-layout";
 import styles from "../../styles/Query.module.css";
 import Head from "next/head";
 import Link from "next/link";
@@ -12,10 +12,19 @@ export default function Response() {
   ];
 
   const router = useRouter();
+  // Accedemos como .query ya que al "linkear esta página"
+  // Declaramos algo como esto: (query lo podríamos cambiar por cualquier otro nombre)
+
+  // <Link
+  // href={{
+  //   pathname: "/query/response",
+  //   query: { opt: 3, msg: "Este es el mensaje" },
+  // }}
+
   const { opt, msg } = router.query;
 
   return (
-    <QueryLayout pageId="query">
+    <SubLayout pageId="query">
       <Head>
         <title>Query - Response {opt}</title>
       </Head>
@@ -41,6 +50,6 @@ export default function Response() {
           <Link href={"/query"}>Volver a Query</Link>
         </div>
       </div>
-    </QueryLayout>
+    </SubLayout>
   );
 }

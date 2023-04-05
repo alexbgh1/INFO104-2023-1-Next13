@@ -1,7 +1,7 @@
 import Navigation from "./Navigation";
 import info_json from "@/pages/api/allLinks.json";
 
-export default function QueryLayout({ children, pageId }) {
+export default function SubLayout({ children, pageId }) {
   // Utilizamos .find para encontrar el elemento que cumpla con la condición
   const info_link = info_json.find((link) => link.pageId === pageId);
 

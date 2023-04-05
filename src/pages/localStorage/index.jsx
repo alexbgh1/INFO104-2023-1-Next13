@@ -1,9 +1,9 @@
-import QueryLayout from "@/components/sub-layout";
+import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 
 export default function JsonT() {
   return (
-    <QueryLayout pageId="localStorage">
+    <SubLayout pageId="localStorage">
       <Head>
         <title>LocalStorage</title>
       </Head>
@@ -18,6 +18,6 @@ export default function JsonT() {
           datos de importancia
         </p>
       </div>
-    </QueryLayout>
+    </SubLayout>
   );
 }

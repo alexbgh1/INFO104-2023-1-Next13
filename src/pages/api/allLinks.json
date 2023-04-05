@@ -24,8 +24,13 @@
     ]
   },
   {
-    "pageId": "test",
-    "links": [{ "href": "/test", "label": "Test" }]
+    "pageId": "probar-cosas",
+    "links": [
+      { "href": "/probar-cosas", "label": "Probar_Cosas" },
+      { "href": "/probar-cosas/ejemplo-1", "label": "Ejemplo 1" },
+      { "href": "/probar-cosas/ejemplo-2", "label": "Ejemplo 2" },
+      { "href": "/probar-cosas/ejemplo-3", "label": "Ejemplo 3" }
+    ]
   },
   {
     "pageId": "chakraUI",

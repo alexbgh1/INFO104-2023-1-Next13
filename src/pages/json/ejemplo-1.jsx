@@ -1,4 +1,4 @@
-import QueryLayout from "@/components/sub-layout";
+import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 
 export default function Ejemplo1() {
@@ -18,7 +18,7 @@ export default function Ejemplo1() {
   ];
 
   return (
-    <QueryLayout pageId="json">
+    <SubLayout pageId="json">
       <Head>
         <title>Json - Ejemplo 1</title>
       </Head>
@@ -53,6 +53,6 @@ export default function Ejemplo1() {
           ))}
         </div>
       </div>
-    </QueryLayout>
+    </SubLayout>
   );
 }

@@ -7,7 +7,7 @@ const links = [
   { href: "/json", label: "Json" },
   { href: "/hooks", label: "Hooks" },
   { href: "/localStorage", label: "LocalStorage" },
-  { href: "/test", label: "Test" },
+  { href: "/probar-cosas", label: "Probar_Cosas" },
   { href: "/chakraUI", label: "ChakraUI" },
 ];
 

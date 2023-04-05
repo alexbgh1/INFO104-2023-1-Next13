@@ -1,11 +1,11 @@
-import QueryLayout from "@/components/sub-layout";
+import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Query.module.css";
 
 export default function Query() {
   return (
-    <QueryLayout pageId="query">
+    <SubLayout pageId="query">
       <Head>
         <title>Query</title>
       </Head>
@@ -44,6 +44,6 @@ export default function Query() {
           click me!
         </Link>
       </div>
-    </QueryLayout>
+    </SubLayout>
   );
 }

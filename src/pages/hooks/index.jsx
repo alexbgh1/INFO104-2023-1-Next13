@@ -1,9 +1,9 @@
-import QueryLayout from "@/components/sub-layout";
+import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 
 export default function Hooks() {
   return (
-    <QueryLayout pageId="hooks">
+    <SubLayout pageId="hooks">
       <Head>
         <title>Hooks</title>
       </Head>
@@ -22,6 +22,6 @@ export default function Hooks() {
           ejemplo que al cambiar una variable, cambie el fondo de color.
         </p>
       </div>
-    </QueryLayout>
+    </SubLayout>
   );
 }

@@ -1,4 +1,4 @@
-import QueryLayout from "@/components/sub-layout";
+import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -40,7 +40,7 @@ export default function Ejemplo2({ data }) {
   }, [random]); // Solo esperamos cuando cambia el valor de random
 
   return (
-    <QueryLayout pageId="json">
+    <SubLayout pageId="json">
       <Head>
         <title>Json - Ejemplo 2</title>
       </Head>
@@ -72,6 +72,6 @@ export default function Ejemplo2({ data }) {
           </div>
         )}
       </div>
-    </QueryLayout>
+    </SubLayout>
   );
 }

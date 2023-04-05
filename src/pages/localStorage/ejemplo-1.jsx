@@ -1,4 +1,4 @@
-import QueryLayout from "@/components/sub-layout";
+import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 
 import { useEffect, useState } from "react";
@@ -12,7 +12,7 @@ export default function Ejemplo1() {
   const [todos, setTodos] = useState(todosJson);
 
   return (
-    <QueryLayout pageId="localStorage">
+    <SubLayout pageId="localStorage">
       <Head>
         <title>LocalStorage - Ejemplo 1</title>
       </Head>
@@ -25,6 +25,6 @@ export default function Ejemplo1() {
           ))}
         </div>
       </div>
-    </QueryLayout>
+    </SubLayout>
   );
 }

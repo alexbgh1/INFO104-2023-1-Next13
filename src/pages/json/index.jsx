@@ -1,9 +1,9 @@
-import QueryLayout from "@/components/sub-layout";
+import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 
 export default function JsonT() {
   return (
-    <QueryLayout pageId="json">
+    <SubLayout pageId="json">
       <Head>
         <title>Json</title>
       </Head>
@@ -15,6 +15,6 @@ export default function JsonT() {
           separados por comas y encerrados entre corchetes.
         </p>
       </div>
-    </QueryLayout>
+    </SubLayout>
   );
 }
