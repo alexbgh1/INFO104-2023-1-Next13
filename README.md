@@ -1,18 +1,29 @@
 # Ejemplo Nextjs 13
 
-## ¿Cómo se creó el 'proyecto' base?
+Un ejemplo de **Nextjs 13** en donde se estructuran páginas y se utilizan algunas funciones, componentes o librerías como ChakraUI.
+
+## ¿Cómo se creó el proyecto base?
 
 ### Pre-requerimientos
 
-Como pre-requerimientos se debe tener instalado **nodejs** en la versión **LTS** (Long Term Support).
+Como pre-requerimientos se debe tener instalado [**nodejs**](https://nodejs.org/en) en la versión **LTS** (Long Term Support).
 
 ### ¿Qué es npm?
 
-**npm** significa **"node pack manager**, es el comando con el que se crean este tipo de proyectos. Existen variantes como **pnpm** o **yarn**, que pueden ser más rápidos. - **_i | install_** : Para instalar alguna dependencia. - **_-D_** : Instalar algo solo para desarrollo, algunos paquetes nos ayudan a experimentar pero no se utilizan en producción.
+[**npm**](https://www.npmjs.com/) significa **"Node Pack Manager**, es el comando con el que se crean este tipo de proyectos. Existen variantes como **pnpm** o **yarn**, que pueden ser más rápidos o eficientes. Si necesitas alguna librerías, un buen inicio para buscar lo que necesitas es en la página de npm.
 
-**npx** es similar solo que "ejecuta" ... rellenarxd
+   - **_i | install_** : Para instalar alguna dependencia. 
+   - **_-D_  | --save-dev**  : Instalar algo solo para desarrollo, algunos paquetes nos ayudan a experimentar pero no se utilizan en producción. 
 
-### Nextjs 13
+**Ejemplos**
+```cmd
+npm i react
+npm install -D tailwindcss
+```
+
+**npx** significa **Node Package eXecute** es similar solo que "ejecuta".
+
+### [Nextjs 13](https://nextjs.org/docs/getting-started)
 
 Creamos el proyecto inicial utilizando `npx create-next-app@latest`, y con las siguientes opciones:
 
@@ -26,15 +37,19 @@ src: Yes
 experimental app: No
 ```
 
-`Name:` // Nombre de aplicaciòn
-`TypeScript:` // Extensiòn (.ts) -> Es como javascript pero más estricto al declarar variables, funciones, etc.
+`Name:` // Nombre de aplicación
+
+`TypeScript:` // Extensiòn [**(.ts)**](https://www.typescriptlang.org/) -> Es como javascript pero más estricto al declarar variables, funciones, etc.
+
 `ESLint:` // Nos señala errores de ejecutado -> Requiere una pequeña configuración
-`src:` // Una carpeta 'src' que contenga todo
-`experimental app:` // Al decir 'Yes' estaríamos trabajando con la versión de Next 13 (beta)
+
+`src:` // Una carpeta **'src'** que contenga todo
+
+`experimental app:` // Al decir **'Yes'** estaríamos trabajando con la versión de **Next 13 (beta)**
 
 ### Dependencias
 
-**ChakraUI:** De manera muy simple nos aporta interfaces ya hechas por otra persona, por lo que solo deberemos llamar los componentes, darle ciertos valores y listo.
+[**ChakraUI:**](https://chakra-ui.com/getting-started/nextjs-guide) De manera muy simple nos aporta interfaces ya hechas por otra persona, por lo que solo deberemos llamar los componentes, darle ciertos valores y listo.
 
 ```cmd
 npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
@@ -52,14 +67,6 @@ pnpm dev
 
 El puerto local de ejecución suele ser el [http://localhost:3000](http://localhost:3000)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
 ## Archivos generados
 
 Al crear un proyecto de `nextjs` tiene muchos archivos, algunos son más importantes que otros, a continuación el significado de algunos:
@@ -70,6 +77,7 @@ package-lock.json: Contiene la información como el nombre de proyecto y los paq
 package.json: Es como una versión resumida, lo importante son >
             [scripts] : Generalmente de ejecución, ej (run dev - 'correr código desarrollo') (run build - 'compilar el código final') (run start - 'correr código final').
             [dependencias] : Las dependencias que se instalaron, ej (react @chakra-ui/react @emotion/react @emotion/styled framer-motion) con sus versiones.
+
 next.config.js: Es la configuración de next, por ejemplo si quisieramos fotos de cierto dominio, deberíamos especificarlo ahí.
 
 node_modules: Lo que se instala cuando utilizamos 'npm install'.
@@ -91,23 +99,23 @@ En `package.json`, puedes ver las dependencias y las versiones.
 
 #### Quiero poner fotos de gatitos, pero next no me deja poner el dominio, ¿dónde lo configuro?
 
-En `next.config.js`, por ejemplo en este 'proyecto' se muestran imágenes de [imgurl](i.imgur.com), daba errores ya que en **next** había que declarar algo similar a esto:
+En `next.config.js`, por ejemplo en este 'proyecto' se muestran imágenes de [imgur](https://imgur.com/), daba errores ya que en **next** había que declarar algo similar a esto:
 
 ```json
-{
-    ...
-  images: {
-    unoptimized: true,
-    remotePatterns: [
+{ 
+  ...
+  "images": {
+    "unoptimized": true,
+    "remotePatterns": [
       {
-        protocol: "https",
-        hostname: "i.imgur.com",
-        port: "",
-        pathname: "/**",
+        "protocol": "https",
+        "hostname": "i.imgur.com",
+        "port": "",
+        "pathname": "/**",
       },
     ],
-  },
-    ...
+  }
+  ...
 }
 ```
 
@@ -115,10 +123,10 @@ Se pueden dar otro tipo de configuraciones. Otro ejemplo es que **next** optimiz
 
 #### Quiero empezar a crear mis páginas, ¿En qué carpeta lo debo hacer?
 
-En `src/pages` en **next** cada archivo que creemos con extensión **.js, jsx, .tsx** (según corresponda) y que cumpla con esto:
+En `src/pages` en **next** crearemos una página, cada vez tenga la extensión **.js, jsx, .tsx** (según corresponda) y que cumpla con lo siguiente:
 
 - [x] Se declara en minúsculas (es una buena práctica). ej: **about.jsx**
-- [x] Debe tener un componente que se declare y exporte.
+- [x] Debe tener un componente que se declare y exporte **(obligatorio)**.
 
 `pages/src/about.jsx` -> La página es `about.jsx` y está en la ruta `<dominio>/about`
 
@@ -158,12 +166,13 @@ export default function Seccion1() {
 
 #### Quiero importar cosas, pero no sé cómo
 
-En **next** al tener muchas rutas se implementó una referencia en "la raíz del archivo". Se accede como `@/`. Esta configuración se encuentra en: `jsconfig.json`.
+En **next** al tener muchas rutas se implementó una referencia en "la raíz del archivo". Se accede como `@/` que por defecto hace referencia al `src/`. Esta configuración se encuentra en: `jsconfig.json`.
 
 ```jsx
 // Con " @/ "
 import styles from "@/styles/General-Layout.module.css";
 // Normalmente si estamos en una carpeta muy alejada: " ../ " retrocede carpeta de manera relativa a la que uno está.
+// (Este podría ser un escenario en el que no utilizamos " @/ ")
 import styles from "../../../../styles/General-Layout.module.css";
 ```
 
