@@ -51,6 +51,12 @@ img {
   text-align: center;
 }
 
+.title-2 {
+  margin-top: 2rem;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
 .text {
   font-size: 1.2rem;
   text-align: center;
@@ -63,7 +69,7 @@ img {
 }
 
 .container__map {
-  margin: 1rem auto 0 auto;
+  margin: 1rem auto 1rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,6 +81,7 @@ img {
   width: 320px;
   border-radius: 5px;
   background-color: var(--nav);
+  margin-bottom: 1rem;
 }
 
 .btn {
@@ -99,4 +106,56 @@ img {
   border-radius: 5px;
   border: 1px solid var(--nav);
   font-size: 1.2rem;
+}
+
+.link {
+  color: var(--nav);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  /* yellow subrayado */
+  background-color: yellow;
+}
+
+/* 404 */
+
+.container-404-general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.container-404 {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  height: 100%;
+}
+
+.title-404 {
+  font-size: 5rem;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  color: var(--nav);
+  border-bottom: 1px solid var(--nav);
+}
+
+@media screen and (min-width: 768px) {
+  .title-404 {
+    border: 0;
+    border-right: 1px solid var(--nav);
+  }
+
+  .container-404-general {
+    flex-direction: row;
+  }
 }

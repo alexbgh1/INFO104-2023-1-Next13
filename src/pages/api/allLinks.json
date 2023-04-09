@@ -47,5 +47,9 @@
       { "href": "/json/ejemplo-1", "label": "Ejemplo 1" },
       { "href": "/json/ejemplo-2", "label": "Ejemplo 2" }
     ]
+  },
+  {
+    "pageId": "posts",
+    "links": [{ "href": "/posts", "label": "Posts" }]
   }
 ]
