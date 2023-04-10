@@ -9,6 +9,7 @@ export default function ProbarCosas() {
       </Head>
       <div className="container">
         <h1 className="title">Probar Cosas</h1>
+        <p className="text">Zona para añadir o probar cosas.</p>
       </div>
     </SubLayout>
   );

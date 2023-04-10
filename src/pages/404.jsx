@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+// Esto es una página de error 404 personalizada
+// Solo debemos crear un archivo 404.jsx en la carpeta pages
+// y Next.js lo detectará automáticamente!
+
 function Error404() {
   return (
     <div

@@ -2,7 +2,7 @@ import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 import Image from "next/image";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export async function getServerSideProps() {
   let data = null;
@@ -23,21 +23,11 @@ export async function getServerSideProps() {
 
 export default function Ejemplo2({ data }) {
   const [random, setRandom] = useState(null);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleOnClick = () => {
-    setImageLoaded(false);
     const random = Math.floor(Math.random() * data.length);
     setRandom(data[random]);
   };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setImageLoaded(true);
-    }, 500); // Esperamos 0.5 segundos antes de mostrar la imagen
-
-    return () => clearTimeout(timer);
-  }, [random]); // Solo esperamos cuando cambia el valor de random
 
   return (
     <SubLayout pageId="json">
@@ -55,8 +45,10 @@ export default function Ejemplo2({ data }) {
           contenido estático
         </p>
         <button className="btn" onClick={handleOnClick}>
-          Soprendeme!
+          Sorpendeme!
         </button>
+
+        {/* Como al principio es 'null', esperamos a que tenga un valor para mostrarlo */}
         {random && (
           <div className="container__map">
             <Image
