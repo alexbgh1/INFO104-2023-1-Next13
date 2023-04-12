@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+// Recibir query params
 export default function Response() {
   let texts = [
     "Que bien! me alegro!",

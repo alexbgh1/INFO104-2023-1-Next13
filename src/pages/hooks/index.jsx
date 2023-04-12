@@ -1,6 +1,7 @@
 import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 
+// Hooks
 export default function Hooks() {
   return (
     <SubLayout pageId="hooks">

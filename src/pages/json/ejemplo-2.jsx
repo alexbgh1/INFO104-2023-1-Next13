@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { useState } from "react";
 
+// Hacer petición FETCH y Utilizar JSON (respuesta)
 export async function getServerSideProps() {
   let data = null;
   try {

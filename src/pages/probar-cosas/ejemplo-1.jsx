@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import Cow from "@/components/Cow";
 
+// Utilizar Sonido
 export default function Ejemplo1() {
   return (
     <SubLayout pageId="probar-cosas">

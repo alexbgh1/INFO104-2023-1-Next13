@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Query.module.css";
 
+// Utilizar query params
 export default function Query() {
   return (
     <SubLayout pageId="query">

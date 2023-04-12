@@ -1,4 +1,4 @@
-import QueryLayout from "@/components/sub-layout";
+import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 import { useState } from "react";
 
@@ -8,12 +8,13 @@ import Anidado1 from "@/components/anidados/Anidado1";
 // Revisar: Carpeta context -> MyContext.jsx
 import { MyContext } from "@/context/MyContext";
 
+// Utilizar useContext
 export default function useContextT() {
   const [color, setColor] = useState("red");
 
   // Pueden navegar entre componentes con CTRL + Click
   return (
-    <QueryLayout pageId="hooks">
+    <SubLayout pageId="hooks">
       <Head>
         <title>Hooks - useContext</title>
       </Head>
@@ -37,7 +38,7 @@ export default function useContextT() {
         Aunque no se utiliza en "Anidados1" se tiene que ir pasando como en "cascada"
       */}
       <Anidado1 color={color} setColor={setColor} />
-    </QueryLayout>
+    </SubLayout>
   );
 }
 

@@ -1,15 +1,6 @@
 import { useState, useEffect } from "react";
-const TodoItem = ({ item }) => {
+const TodoItem = ({ item, handleTodoCheck }) => {
   const [listo, setListo] = useState(item.checked);
-
-  useEffect(() => {
-    if (localStorage.getItem(item.id) !== null)
-      setListo(JSON.parse(localStorage.getItem(item.id)));
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem(item.id, JSON.stringify(listo));
-  }, [listo]);
 
   return (
     <>
@@ -21,6 +12,7 @@ const TodoItem = ({ item }) => {
             checked={listo}
             onChange={(e) => {
               setListo(!listo);
+              handleTodoCheck(item.id);
             }}
           />
         </div>

@@ -1,6 +1,7 @@
 import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 
+// Recorrer un JSON
 export default function Ejemplo1() {
   const data = [
     {

@@ -1,6 +1,7 @@
 import SubLayout from "@/components/sub-layout";
 import Head from "next/head";
 
+// Utilizar JSON
 export default function JsonT() {
   return (
     <SubLayout pageId="json">
