@@ -7,6 +7,14 @@
     ]
   },
   {
+    "pageId": "api",
+    "links": [
+      { "href": "/api-ejemplo", "label": "API" },
+      { "href": "/api-ejemplo/ejemplo-1", "label": "Ejemplo 1" },
+      { "href": "/api-ejemplo/ejemplo-2", "label": "Ejemplo 2" }
+    ]
+  },
+  {
     "pageId": "hooks",
     "links": [
       { "href": "/hooks", "label": "Hooks" },

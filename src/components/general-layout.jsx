@@ -9,6 +9,7 @@ const links = [
   { href: "/localStorage", label: "LocalStorage" },
   { href: "/probar-cosas", label: "Probar_Cosas" },
   { href: "/chakraUI", label: "ChakraUI" },
+  { href: "/api-ejemplo", label: "API" },
   { href: "/posts", label: "Posts" },
 ];
 
