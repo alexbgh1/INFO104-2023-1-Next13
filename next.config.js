@@ -1,21 +1,4 @@
 /** @type {import('next').NextConfig} */
+const nextConfig = {}
 
-// Para utilizar imágenes de terceros, como imgur, se debe agregar el siguiente código en el archivo next.config.js
-// (La parte de images{})
-
-const nextConfig = {
-  images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "i.imgur.com",
-        port: "",
-        pathname: "/**",
-      },
-    ],
-  },
-  reactStrictMode: true,
-};
-
-module.exports = nextConfig;
+module.exports = nextConfig
